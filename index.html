@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Khauni's Coffee Lounge</title> <!--The Start of my demise-->
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Khauni's Coffee Lounge</h1>
+        <hr>
+        <p class="intro-text"> Welcome to my corner of the web, Feel free to check the place out!</p>
+        <hr>
+        
+        <!-- Quote that now looking back sounds a little edgy. -->
+        <div class="quote-box">
+            <blockquote>
+                "In my eyes I would rather give what I have than take what I need, helping others to make the world a better place, knowing I did good in my life" - Khauni
+            </blockquote>
+        </div>
+
+        <!-- Projects Because why not. -->
+        <section id="projects" class="box">
+            <h2>Projects</h2>
+            <ul>
+                <li><a href="https://github.com/Khauni/Tidal-Resonite">Resonite Tidal Music Player</a></li>
+                <li>Rocco Stable Diffusion Bot</li>
+                <li>YiffyMix Stable Diffusion Bot</li>
+                <li>Aurora Nexus Galaxy Starbound Server</li>
+            </ul>
+        </section>
+
+
+        <style>
+            .gallery-button {
+                background-color: #FF69B4; 
+                color: #FFFFFF; 
+                padding: 10px 20px; 
+                border: none; 
+                border-radius: 4px; 
+                cursor: pointer; 
+            }
+            .gallery-button:hover {
+                background-color: #FF69B4; 
+            }
+            #next-button {
+                float: right; 
+            }
+            #prev-button {
+                float: left; 
+            }
+        </style>
+<div class="box">
+    <h3>VR Photo's</h3>
+    <img id="gallery-image" src="images/1.jpg">
+    <div class="gallery-buttons">
+      <button id="prev-button" onclick="changeImage(-1)">Previous</button>
+      <button id="next-button" onclick="changeImage(1)">Next</button>
+    </div>
+  </div>
+  
+  
+        <!--Stuffs that make vr photo work-->
+        <script>
+let currentImage = 1;
+let imageExtension = '.jpg'; 
+
+// Haha meth..I MEAN MATH
+function changeImage(direction) {
+  currentImage += direction;
+
+  if (currentImage < 1) {
+    currentImage = 11;
+  } else if (currentImage > 11) {
+    currentImage = 1;
+  }
+
+  if (currentImage > 7) {
+    imageExtension = '.png';
+  } else {
+    imageExtension = '.jpg';
+  }
+
+  const galleryImage = document.getElementById('gallery-image');
+  galleryImage.src = `images/${currentImage}${imageExtension}`;
+}
+
+
+
+
+changeImage(0);
+
+            </script>
+            
+        <!-- Bedroom Light Section, Aka Hell. -->
+        <section id="bedroomlight" class="box">
+            <h2>Bedroom Light W.I.P.</h2>
+            <p>Yes youll be able to turn on/off my light.</p>
+ 
+        <!-- extra junk -->
+        <section id="links">
+            <h2>Links</h2>
+            <ul>
+                <li>KageDreemurr@furrballfactory.com - Work Email</li>
+                <li><a href="https://discord.gg/Y3ewYQsBc2">Furrball Factory Discord Server</a></li>
+                <li><a href="https://discord.gg/xgUraCqfP8">Aurora Nexus Galaxy Discord Server</a></li>
+            </ul>
+        </section>
+        <footer>
+            <p>&copy; 2023 Khauni.Coffee</p>
+        </footer>
+    </div>
+
+  
+
+
+</body>
+</html>

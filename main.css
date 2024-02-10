@@ -1,0 +1,172 @@
+body {
+    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+    font-weight: 300;
+    margin: 0;
+    padding: 0;
+    background-image: url('https://wallpapercave.com/wp/wp2343919.jpg');
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.container {
+    background: rgba(0, 0, 30, 0.7); 
+    border: 2px solid #FF69B4; 
+    border-radius: 10px;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    color: rgb(152, 171, 255); /*Dont edit this line, changes most text on website*/
+}
+
+.container h1 {
+    font-size: 2.5em;
+    text-align: center;
+    color: rgb(152, 171, 255 )
+}
+
+.container .intro-text {
+    font-size: 1.2em;
+    text-align: center;
+    margin: 20px 0;
+}
+
+.quote-box {
+    text-align: center;
+    background: rgba(0, 0, 30, 0.7); 
+    padding: 20px;
+    border: 2px solid #FF69B4; 
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(255, 105, 180, 0.5); 
+    margin: 0 auto;
+    max-width: 600px;
+}
+
+.quote-box blockquote {
+    font-size: 1.2em;
+    color: #FF69B4; 
+}
+
+.box {
+    background-color: rgba(255, 105, 180, 0.5); 
+    margin: 20px 0;
+    padding: 20px;
+    border: 2px solid #FF69B4; 
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(255, 105, 180, 0.5); 
+}
+
+.box h2 {
+    font-size: 1.5em;
+    color: #FF69B4; 
+}
+
+.box ul {
+    list-style-type: disc;
+    margin-left: 20px;
+    font-size: 1.2em;
+}
+
+
+.container a,
+.container a:visited {
+    color: #FF69B4; 
+}
+
+footer {
+    text-align: center;
+    margin-top: 20px;
+}
+
+footer p {
+    font-size: 1.2em;
+    color: #FF69B4; 
+}
+#photo-gallery {
+    background-color: #4B0082; 
+    color: #FFFFFF; 
+    padding: 20px;
+}
+
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.photo {
+    flex: 1;
+    max-width: calc(33.33% - 10px);
+}
+
+.photo img {
+    width: 100%;
+    border: 2px solid #FFFFFF; 
+}
+
+.photo-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    position: relative;
+}
+
+.photo {
+    flex: 1;
+    min-width: 0;
+    position: relative;
+    overflow: hidden; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.photo img {
+    max-width: 100%; 
+    max-height: 100%; 
+}
+.box {
+    border: #FFD1FF double 4px;
+    max-width: 800px;
+    margin: auto;
+    margin-top: 50px;
+    padding: 10px;
+    position: relative;
+    background-color: rgba(48, 0, 82, 0.5);
+  }
+  
+  #gallery-image {
+    max-width: 100%;
+    display: block;
+    margin: 0 auto;
+  }
+  
+  .gallery-buttons {
+    position: absolute;
+    bottom: 10px;
+    left: 0;
+    right: 0;
+    text-align: center;
+  }
+  
+  .gallery-buttons button {
+    background-color: hotpink;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    margin: 0 10px;
+    border-radius: 5px; 
+    transition: background-color 0.3s; 
+  }
+  
+  .gallery-buttons button:hover {
+    background-color: rgb(75, 0, 130); 
+  }
+  h3 {
+    text-align: center; 
+    font-size: 24px; 
+    color: hotpink; 
+}
+  
