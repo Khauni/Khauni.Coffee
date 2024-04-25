@@ -9,7 +9,7 @@
     <div class="container">
         <h1>Khauni's Coffee Lounge</h1>
         <hr>
-        <p class="intro-text"> Welcome to my corner of the web, Feel free to check the place out!</p>
+        <p class="intro-text">Welcome to my corner of the web. Feel free to check the place out!</p>
         <hr>
         
         <!-- Quote that now looking back sounds a little edgy. -->
@@ -19,16 +19,16 @@
             </blockquote>
         </div>
 
-        <!-- Projects Because why not. -->
+        <!-- Projects -->
         <section id="projects" class="box">
             <h2>Projects</h2>
             <ul>
                 <li><a href="https://github.com/Khauni/Tidal-Resonite">Resonite Tidal Music Player</a></li>
                 <li>Rocco Stable Diffusion Bot</li>
                 <li>YiffyMix Stable Diffusion Bot</li>
-                <li>Aurora Nexus Galaxy Starbound Server</li>
             </ul>
         </section>
+
 
 
         <style>
@@ -75,7 +75,7 @@ function changeImage(direction) {
     currentImage = 1;
   }
 
-  if (currentImage > 7) {
+  if (currentImage > 12) {
     imageExtension = '.png';
   } else {
     imageExtension = '.jpg';
@@ -92,27 +92,166 @@ changeImage(0);
 
             </script>
             
-        <!-- Bedroom Light Section, Aka Hell. -->
-        <section id="bedroomlight" class="box">
-            <h2>Bedroom Light W.I.P.</h2>
-            <p>Yes youll be able to turn on/off my light.</p>
- 
-        <!-- extra junk -->
-        <section id="links">
+
+
+<!-- Load JS shittery on load -->
+<section id="lastfm" class="box">
+    <h2>Last.fm - Tidal</h2>
+    <div id="most-played"></div>
+    <div id="currently-listening"></div>
+    <div id="time-spent"></div>
+</section>
+
+
+<!-- Last.fm Section -->
+<!-- JS for Last.fm Section -->
+<script>
+    // Last.fm API Key and Username | Please no steal/abuse
+    const API_KEY = '01478994570fda85d67de80d069976ab';
+    const USERNAME = 'Khauni';
+
+    // Last.fm API stuffs
+    const TOP_TRACKS_ENDPOINT = `https://ws.audioscrobbler.com/2.0/?method=user.gettoptracks&user=${USERNAME}&api_key=${API_KEY}&format=json&limit=1`;
+    const RECENT_TRACKS_ENDPOINT = `https://ws.audioscrobbler.com/2.0/?method=user.getrecenttracks&user=${USERNAME}&api_key=${API_KEY}&format=json&limit=1`;
+    const USER_INFO_ENDPOINT = `https://ws.audioscrobbler.com/2.0/?method=user.getinfo&user=${USERNAME}&api_key=${API_KEY}&format=json`;
+
+    // Function to fetch most played song
+    async function fetchMostPlayedSong() {
+        try {
+            const response = await fetch(TOP_TRACKS_ENDPOINT);
+            const data = await response.json();
+
+            // Extracting most played track
+            const track = data.toptracks.track[0];
+            const trackName = track.name;
+            const artist = track.artist.name;
+
+            
+            document.getElementById('most-played').innerHTML = `<p>Most Played Song: ${trackName} by ${artist}</p>`;
+        } catch (error) {
+            console.error('Error fetching most played song:', error);
+        }
+    }
+
+    // Function to check if im currently listening to anything
+    async function checkCurrentlyListening() {
+        try {
+            const response = await fetch(RECENT_TRACKS_ENDPOINT);
+            const data = await response.json();
+
+            // Checking playing
+            const track = data.recenttracks.track[0];
+            const isNowPlaying = track && track['@attr'] && track['@attr'].nowplaying === 'true';
+
+            // Displaying currently listening
+            if (isNowPlaying) {
+                document.getElementById('currently-listening').innerHTML = `<p>Currently Listening: ${track.name} by ${track.artist['#text']}</p>`;
+            } else {
+                document.getElementById('currently-listening').innerHTML = "<p>Currently not listening to anything.</p>";
+            }
+        } catch (error) {
+            console.error('Error checking currently listening:', error);
+        }
+    }
+
+    // Function to fetch me data
+    async function fetchUserInfo() {
+        try {
+            const response = await fetch(USER_INFO_ENDPOINT);
+            const data = await response.json();
+
+            
+            const registrationDate = new Date(data.user.registered.unixtime * 1000); // Convert Unix timestamp to milliseconds
+            const currentYear = new Date().getFullYear();
+            const registrationYear = registrationDate.getFullYear();
+
+            // Calculate time spent listening this year | NOT BEING USED ON THIS VERSION OF MY SITE
+            const totalListeningTime = data.user.playcount;
+            const totalDays = Math.floor(totalListeningTime / (24 * 3600));
+            const totalHours = Math.floor((totalListeningTime % (24 * 3600)) / 3600);
+
+            let timeSpentText = '';
+            if (currentYear === registrationYear) {
+                timeSpentText = `Time wasted listening to music this year: ${totalDays} Days ${totalHours} Hrs`;
+            } else {
+                timeSpentText = 'You haven\'t listened to music this year.';
+            }
+
+            // Display time spent listening | NOT BEING USED ON THIS VERSION OF MY SITE
+            document.getElementById('time-spent').innerHTML = `<p>${timeSpentText}</p>`;
+        } catch (error) {
+            console.error('Error fetching user info:', error);
+        }
+    }
+
+
+   
+    
+</script>
+
+
+
+
+<!-- Minecraft Server Status Section -->
+<section id="minecraft-servers" class="box">
+    <h2>Minecraft Server Status</h2>
+    <div id="server-status"></div>
+</section>
+
+<!-- JavaScript for Minecraft Server Status -->
+<script>
+    // Function to fetch Minecraft server status
+    async function fetchServerStatus() {
+        try {
+            const response = await fetch('https://api.mcsrvstat.us/2/68.119.15.163'); // Modded server
+            const data = await response.json();
+
+            // Extracting server status
+            const moddedServer = data;
+
+            // Displaying server status
+            document.getElementById('server-status').innerHTML = `
+                <p>Modded 1.20.1 Forge: ${moddedServer.online ? 'Online' : 'Offline'} | ${moddedServer.players.online}/${moddedServer.players.max} players connected</p>
+            `;
+        } catch (error) {
+            console.error('Error fetching server status:', error);
+        }
+    }
+
+    // Fetch Minecraft server status on page load
+    window.onload = function() {
+        fetchMostPlayedSong();
+        checkCurrentlyListening();
+        fetchServerStatus();
+    };
+</script>
+
+
+
+
+
+
+
+
+        <!-- My Info Section -->
+        <section id="myinfo" class="box">
             <h2>Links</h2>
             <ul>
-                <li>KageDreemurr@furrballfactory.com - Work Email</li>
-                <li><a href="https://discord.gg/Y3ewYQsBc2">Furrball Factory Discord Server</a></li>
-                <li><a href="https://discord.gg/xgUraCqfP8">Aurora Nexus Galaxy Discord Server</a></li>
+                <li>Email: KageDreemurr@furrballfactory.com</li>
+                <li>Github: <a href="https://github.com/Khauni">Khauni</a></li>
+                <li>LastFM: <a href="https://www.last.fm/user/Khauni">Khauni</a></li>
+                <li>Discord Server: <a href="https://discord.gg/Y3ewYQsBc2">Furrball Factory Discord Server</a></li>
             </ul>
         </section>
-        <footer>
-            <p>&copy; 2023 Khauni.Coffee</p>
-        </footer>
     </div>
 
-  
 
 
+
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Khauni.Coffee</p>
+    </footer>
 </body>
 </html>
