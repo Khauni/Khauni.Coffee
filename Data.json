@@ -1,0 +1,17 @@
+{
+    "lastfm_most_played": {
+        "artist": "Faceless 1-7",
+        "title": "Download My Conscious"
+    },
+    "lastfm_currently_listening": {
+        "artist": "Post Malone, Ty Dolla $ign",
+        "title": "Psycho",
+        "album_art_url": "https://lastfm.freetls.fastly.net/i/u/300x300/7bfb45ca274a5b738f68c4c612692416.jpg",
+        "timestamp": "2024-06-22T04:10:27+00:00"
+    },
+    "minecraft": {
+        "online": true,
+        "players": 0,
+        "max_players": 32
+    }
+}
