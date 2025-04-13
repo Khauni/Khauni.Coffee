@@ -1,0 +1,649 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Khauni's Coffee Lounge
+  </title>
+  <link href="main.css" rel="stylesheet"/>
+  <meta content="My corner of the web" name="description"/>
+  <meta content="Furry, Cybersecurity, VR, Degenerecy" name="keywords"/>
+  <meta content="Khauni" name="author"/>
+  <link href="Assets/Gay.jpg" rel="icon"/>
+  <meta content="Assets/Gay.jpg" property="og:image">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+
+<!------------------------Background Music----------------------------------->
+
+<audio id="background-music" src="/Assets/EdgyAudio3.mp3" autoplay loop>
+        
+</audio>
+ 
+<script>
+        document.addEventListener('DOMContentLoaded', (event) => {
+            const audio = document.getElementById('background-music');
+            audio.volume = 0.01; // Volume Level. Adjust if your poking around in here for the music 
+        });
+    </script>
+
+<!---------------------------------------------Just a divider-------------------------------------------------------->
+
+  <title>Stars Background</title>
+  <style>
+      body {
+          margin: 0;
+          /* overflow: hidden; Prevent scrollbars */
+          font-family: Arial, sans-serif;
+          background-color: #000; /* Background color */
+          color: #fff; /* Text color */
+      }
+  
+      /* Style for stars */
+      .star {
+          position: absolute;
+          width: 2px;
+          height: 2px;
+          background-color: #fff;
+          border-radius: 50%;
+          animation: twinkle 30s infinite, float 6s infinite alternate; /* Added float animation */
+          opacity: 0; /* Initially hidden */
+      }
+  
+      /* Animation keyframes for twinkling */
+      @keyframes twinkle {
+          0% { opacity: 0; }
+          10% { opacity: 1; }
+          20% { opacity: 0; }
+          100% { opacity: 0; }
+      }
+  
+      /* Animation keyframes for floating */
+      @keyframes float {
+          0%, 100% { transform: translate(0, 0); } /* No movement */
+          50% { transform: translate(10px, 5px); } /* Slight movement */
+      }
+  </style>
+  </head>
+  <body>
+  <!-- Stars container -->
+  <div class="stars-container">
+      <!-- My days are numbered, Numbered till about 30 years. Maybe, Just maybe.  -->
+  </div>
+  
+  <!-- JavaScript to generate stars -->
+  <script>
+      document.addEventListener('DOMContentLoaded', function() {
+          const numStars = 300; // Number of stars
+          const container = document.querySelector('.stars-container');
+  
+          // Generate shitty shit
+          for (let i = 0; i < numStars; i++) {
+              const star = document.createElement('div');
+              star.className = 'star';
+              star.style.top = `${Math.random() * 100}%`; // Random vertical position
+              star.style.left = `${Math.random() * 100}%`; // Random horizontal position
+              star.style.animationDelay = `${Math.random() * 30}s`; // Random animation delay up to 30s
+              container.appendChild(star);
+          }
+      });
+  </script>
+
+
+
+<!---------------------------------------------Just a divider-------------------------------------------------------->
+
+
+
+ </head>
+ <body>
+  <!--<img id="bg" src="assets/bg.png"/> -->
+  <span id="debug">
+  </span>
+  </span>
+  <div id="container">
+   <div id="logo">
+   </div>
+   <table>
+    <tbody>
+     <tr>
+      <td id="maintd">
+       <div id="cursors">
+       </div>
+       <div class="box" id="mainbox">
+        <h2 style="color:rgb(2, 174, 241)">
+         Welcome to my corner of the web. Feel free to check the place out!
+        </h2>
+        <br/>
+        <img id="Ico" src="Assets/Gay.jpg"/>
+        <div id="Knot-Kh" title="Last update: 6/25/2024, 2:45:13 AM">
+         <a>
+          <span id="Knot" style="color:#00d9ff">
+           09/09/2004
+          </span>
+         <span id="Knot" style="color:#00d9ff">
+         <div id="heart-rate">❤️ -- bpm</div>   
+         </span>
+         </a>
+        </div>
+        <p>
+         "я скорее отдам то, что имею, чем возьму то, что мне нужно, помогая другим сделать мир лучше, зная, что я сделал добро в своей жизни." - Khauni
+        </p>
+        <p>
+         Im just another degenerate on the internet who spends his time making fairly decent code and plays way too much VR.
+        </p>
+        <p>
+         ​
+        </p>
+<!----------------------------Some info about me, Maybe ill put some secret things in notes within this-------------------------------------------------------->
+        <span>
+         Some Info About Me:
+         <br/>
+        </span>
+        <ul style="margin-block-start: 5px">
+         <li>
+          I'm from the good old U.S. of A
+         </li>
+         <li>
+          Thanatophobic
+         </li>
+         <li>
+          I listen to WAY too much music. (Last FM Listed Below)
+         </li>
+         <li>
+          My only social media consists of Discord, Telegram, And twitter.
+         </li>
+         <li>
+          I am a massive Aviation & Tech Nerd.
+         </li>
+         [Thats pretty much it, If you want to know me more ya should get to know me outside of jus pokin around]
+         </li>
+        </ul>
+        </div>
+       </div>
+       </div>
+       <div class="box" style="margin-top: 10px;">
+        </a>
+<!---------------------------------------------Just a divider-------------------------------------------------------->
+        <h2 style="color:rgb(2, 174, 241)">
+         My Random Projects
+        </h2>
+        <br/>
+        <br/>
+        <a href="https://github.com/Khauni/Tidal-Resonite" rel="nofollow" target="_blank">
+         <h3>
+         [Resonite - Tidal Player]
+         </h3>
+        </a>
+        <br/>
+        A simple-ish python script to connect your <a href="https://tidal.com/" target="_blank">Tidal</a> Player to your resonite application VIA websocket connection
+        <br/>
+        <br/>
+        <a href="https://discord.com/oauth2/authorize?client_id=1212576623673610280&scope=bot&permissions=3230728" rel="nofollow" target="_blank">
+         <h3>
+          [Nardo.FM Discord Music bot]
+         </h3>
+        </a>
+        <br/>
+        A simple discord music bot I host, Your welcome to use it but dont expect 100% reliability, Also thanks @Blueberrywolfi for help fixing it!
+        <br/>
+		<br/>
+        <a href="https://discord.gg/a6nbc3Pygr" rel="nofollow" target="_blank">
+         <h3>
+          [Macro Micro Network]
+         </h3>
+        </a>
+        <br/>
+        A small resonite community for Macro/Micro Furries to be able to meetup and hangout.
+        <br/>
+        <br/>
+        <a href="resrec:///U-kagedreemurr/R-44BE115600C371776419EC46C12E8A148F4AAE647DC47D93F38A8C220A847E57" rel="nofollow" target="_blank">
+         <h3>
+          [TN-SUM - Resonite User Manager]
+         </h3>
+        </a>
+        <br/>
+        "Tottaly Not Shit User Manager" Is my simple ass user manager to keep worlds relativly clean and optimized. Itl be released to the public when its up to my standard.
+        <br/>
+		<br/>
+        <a href="https://khauni.coffee" rel="nofollow" target="_blank">
+         <h3>
+          [BeamMP Free-Roam Server's W/ Day/Night Cycle]
+         </h3>
+        </a>
+        <br/>
+        I host 2 Different servers at the current moment for beammp 24/7 that are open to the public, Just search Khauni.Coffee and youll find them! 
+        <br/>
+        [ <a href="https://windowserver.khauni.coffee/c/52ffbcac" target="_blank">West Coast Server</a> ] [ <a href="https://windowserver.khauni.coffee/c/c1f77932" target="_blank">Italy Server</a> ]
+        <br/>
+		<br/>
+        <a href="https://paws.khauni.coffee/public/furtrash" rel="nofollow" target="_blank">
+         <h3>
+          [Fur:Trash Puppy Radio 24/7]
+         </h3>
+        </a>
+        <br/>
+        Just a radio im hosting that is playing Fur:Trash's music. Feel free to listen to whenever
+        <br/>
+		<br/>
+
+
+<!---------------------------------------------System Status's-------------------------------------------------------->
+        </span>
+       </div>
+       <div class="box terminal" style="margin-top: 10px; ">
+        <span>
+         Systems Status:
+         <span class="status-ok" id="system-status">
+          FULLY ONLINE
+         </span>
+         <br/>
+         <br/>
+         <table>
+          <tbody>
+           <tr id="statuses">
+            <td>
+             <span>
+              [
+              <span class="status-ok">
+               OK
+              </span>
+              ] API.Khauni.Coffee
+             </span>
+             <br/>
+             <span>
+              [
+              <span class="status-ok">
+               OK
+              </span>
+              ] Nardo.FM
+             </span>
+             <br/>
+             <span>
+              [
+              <span class="status-ok">
+               OK
+              </span>
+              ] Macro Micro Headless
+             </span>
+             <br/>
+
+             <br/>
+            </td>
+            <td>
+             <span>
+              [
+              <span class="status-ok">
+               OK
+              </span>
+              ] Discord Web API
+             </span>
+             <br/>
+             <span>
+              [
+              <span class="status-ok">
+               OK
+              </span>
+              ] Network Monitor
+             </span>
+             <br/>
+             <span>
+              [
+              <span class="status-ok" >
+               OK
+              </span>
+              ] Resonite Monitor
+             </span>
+
+            </td>
+           </tr>
+          </tbody>
+         </table>
+        </span>
+       </div>
+       <!---------------------------------------------Right Sidebar------------------------------------------------------->
+
+       <td id="songstd" style="max-width: 225px">
+
+        
+         <div class="box" style="margin-top: 10px; margin-bottom: 10px;">
+             <b>Most Listened To Song</b>
+             <br/><br/>
+             <div id="top-song">
+                 <p id="top-song-title">Loading...</p>
+                 <p id="top-song-artist">by: Loading...</p>
+             </div>
+         </div>
+
+         
+         <div class="box" style="margin-top: 10px; margin-bottom: 10px;">
+             <b>Currently Listening To</b>
+             <br/><br/>
+             <div id="current-song">
+                 <p id="current-song-title">Loading...</p>
+                 <p id="current-song-artist">by: Loading...</p>
+             </div>
+         </div>
+
+<!-- Temporary code that may or may not be used at some point, depends if i live long enough to finish everything.
+         <div class="box" style="margin-top: 10px; margin-bottom: 10px;">
+            <b>Background Music</b>
+            <br/><br/>
+            <div id="music-controls">
+                <div class="button-container">
+                    <button onclick="play()">Play</button>
+                    <button onclick="pause()">Pause</button>
+                    <button onclick="skip()">Skip</button>
+                </div>
+            
+                <div class="volume-control">
+                    
+                   <input type="range" id="volume" name="volume" min="0" max="100" oninput="setVolume(this.value)">  
+                </div>
+            </div>
+        </div>
+-->
+
+               <!---------------------------------------------Misc Links-------------------------------------------------------->
+
+        <div class="box" style="margin-top: 10px; margin-bottom: 10px;">
+         <b>Misc Links.</b>
+         <br/><br/>
+         <div id="minecraft-status">
+         
+               <a href="https://ko-fi.com/knotkhauni" rel="nofollow" target="_blank">
+               <hp>
+                [Support Me @ Ko-Fi]
+               </hp>
+              </a>
+              <br/>
+              <br/>
+            <a href="https://discord.gg/qPEM664DGY" rel="nofollow" target="_blank">
+               <hp>
+                [Personal Discord]
+               </hp>
+              </a>
+              <br/>
+              <br/>
+              <a href="https://x.com/KageDreemurr" rel="nofollow" target="_blank">
+               <hp>
+                [Twitter]
+               </hp>
+              </a>
+              <br/>
+              <br/>
+              <a href="https://github.com/Khauni" rel="nofollow" target="_blank">
+               <hp>
+                [Github]
+               </hp>
+              </a>
+              <br/>
+              <br/>
+              <a href="https://www.last.fm/user/Khauni" rel="nofollow" target="_blank">
+               <hp>
+                [Last FM]
+               </hp>
+              </a>
+              <br/>
+         		<br/>
+              <a href="https://steamcommunity.com/id/khauni/" rel="nofollow" target="_blank">
+               <hp>
+                [Steam]
+               </hp>
+              </a>
+              <br/>
+              <br/>
+              <a href="https://khauni.coffee/ResonitePhotos" rel="nofollow" target="_blank">
+               <hp>
+                [Resonite VR Photos]
+               </hp>
+              </a>
+              <br/>
+              <br/>
+              <a href="https://khauni.coffee/Renders" rel="nofollow" target="_blank">
+               <hp>
+                [Render's Of Mine]
+               </hp>
+              </a>
+              <br/>
+              <br/>
+              <a href="https://khauni.coffee/Misc Music Of Mine" rel="nofollow" target="_blank">
+               <hp>
+                [My Collection Of Random Music]
+               </hp>
+              </a>
+         	  <br/>
+              <br/>
+              <a href="https://khauni.coffee/BRC" rel="nofollow" target="_blank">
+               <hp>
+                [Bomb Rush Cyberfunk Asset's]
+               </hp>
+              </a>
+              <br/>
+              <br/>
+         	  <a href="https://khauni.coffee/RedVBlue/" rel="nofollow" target="_blank">
+               <hp>
+                [ Red VS Blue Archive ]
+               </hp>
+              </a>
+              <br/>
+              <br/>
+               <a href="https://paws.khauni.coffee/public/knotkhauni" rel="nofollow" target="_blank">
+               <hp>
+                [ My Random Ass Music Radio ]
+               </hp>
+              </a>
+              <br/>
+              <br/>
+         </div>
+     </div>
+     </td>
+
+  <!-------------------------------------------------Another Divider for my sanity---------------------------------------------------------->
+  <script>
+   // Last.fm API Key and Username
+   const API_KEY = '';
+   const USERNAME = 'Khauni';
+   
+   // Last.fm API endpoints
+   const TOP_TRACKS_ENDPOINT = `https://ws.audioscrobbler.com/2.0/?method=user.gettoptracks&user=${USERNAME}&api_key=${API_KEY}&format=json&limit=1`;
+   const RECENT_TRACKS_ENDPOINT = `https://ws.audioscrobbler.com/2.0/?method=user.getrecenttracks&user=${USERNAME}&api_key=${API_KEY}&format=json&limit=1`;
+   
+   // Function to fetch most played song from Last.fm
+   async function fetchMostPlayedSong() {
+       try {
+           const response = await fetch(TOP_TRACKS_ENDPOINT);
+           const data = await response.json();
+   
+           if (data && data.toptracks && data.toptracks.track && data.toptracks.track.length > 0) {
+               const track = data.toptracks.track[0];
+               return {
+                   artist: track.artist.name,
+                   title: track.name,
+                   url: track.url,
+                   KnotTimes: track.playcount
+                   
+               };
+           }
+           return {};
+       } catch (error) {
+           console.error('Error fetching most played song:', error);
+           return {};
+       }
+   }
+   
+   // Function to check if currently listening to any song on Last.fm
+   async function checkCurrentlyListening() {
+       try {
+           const response = await fetch(RECENT_TRACKS_ENDPOINT);
+           const data = await response.json();
+   
+           if (data && data.recenttracks && data.recenttracks.track && data.recenttracks.track.length > 0) {
+               const track = data.recenttracks.track[0];
+               const isNowPlaying = track['@attr'] && track['@attr'].nowplaying === 'true';
+   
+               if (isNowPlaying) {
+                   return {
+                       artist: track.artist['#text'],
+                       title: track.name,
+                   };
+               } else {
+                   return {};
+               }
+           }
+           return {};
+       } catch (error) {
+           console.error('Error checking currently listening:', error);
+           return {};
+       }
+   }
+   
+
+   async function updateLastFMDisplay() {
+       try {
+           const mostPlayedSong = await fetchMostPlayedSong();
+           const currentlyListening = await checkCurrentlyListening();
+   
+
+           document.getElementById('top-song-title').textContent = mostPlayedSong.title || 'Unknown';
+           document.getElementById('top-song-artist').textContent = `by: ${mostPlayedSong.artist || 'Unknown'}`;
+   
+
+           if (Object.keys(currentlyListening).length > 0) {
+               document.getElementById('current-song-title').textContent = currentlyListening.title || 'Unknown';
+               document.getElementById('current-song-artist').textContent = `by: ${currentlyListening.artist || 'Unknown'}`;
+           } else {
+               document.getElementById('current-song-title').textContent = 'Not currently listening to any song.';
+               document.getElementById('current-song-artist').textContent = '';
+           }
+       } catch (error) {
+           console.error('Error updating Last.fm display:', error);
+       }
+   }
+   
+
+// -------------------------------------------Background Music Control------------------------------------------------
+
+// Array of song files
+const songs = [
+    'https://khauni.coffee/Assets/EdgyAudio2.mp3',
+    'https://khauni.coffee/Assets/Sadboi_Nard_1.mp3',
+    'https://khauni.coffee/Assets/Sadboi_Nard_2.mp3',
+    'https://khauni.coffee/Assets/Sadboi_Nard_3.mp3',
+	'https://khauni.coffee/Assets/EdgyAudio3.mp3'// Just a collection.
+];
+
+// Current song index
+let currentSongIndex = 0;
+
+// Get the audio player
+const audioPlayer = document.getElementById('background-music');
+
+function play() {
+    audioPlayer.play();
+}
+
+function pause() {
+    audioPlayer.pause();
+}
+
+function stop() {
+    audioPlayer.pause();
+    audioPlayer.currentTime = 0;
+}
+
+function setVolume(value) {
+    audioPlayer.volume = value / 100;
+}
+
+function skip() {
+    currentSongIndex = (currentSongIndex + 1) % songs.length;
+    audioPlayer.src = songs[currentSongIndex];
+    audioPlayer.play();
+}
+
+// Every wanna kill youself?
+window.play = play;
+window.pause = pause;
+window.stop = stop;
+window.setVolume = setVolume;
+window.skip = skip;
+
+
+   // I love leaking military docs
+   window.onload = function() {
+       updateLastFMDisplay();
+   };
+</script>
+
+<!-----------------------------------Pulsoid Heartrate thing, Because i got bored.-------------------------------------------->
+
+
+
+
+<script>
+    const PULSOID_TOKEN = ''; // replace with your actual token
+9
+    async function fetchHeartRate() {
+        try {
+            const response = await fetch('https://dev.pulsoid.net/api/v1/data/heart-rate', {
+                headers: {
+                    'Authorization': 'Bearer ' + PULSOID_TOKEN
+                }
+            });
+
+            if (!response.ok) throw new Error("API error");
+
+            const data = await response.json();
+            const bpm = data?.data?.heartRate ?? '--';
+            document.getElementById('heart-rate').textContent = `❤️ ${bpm} bpm`;
+        } catch (err) {
+            console.error('Heart rate fetch error:', err);
+            document.getElementById('heart-rate').textContent = '❤️ error';
+        }
+    }
+
+    fetchHeartRate(); // initial fetch
+    setInterval(fetchHeartRate, 500); // repeat every 5 seconds
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script src='https://storage.ko-fi.com/cdn/scripts/overlay-widget.js'></script>
+<script> //All this Ko-Fi bullshit because i cant afford this forever
+  kofiWidgetOverlay.draw('knotkhauni', {
+    'type': 'floating-chat',
+    'floating-chat.donateButton.text': 'Donate',
+    'floating-chat.donateButton.background-color': '#323842',
+    'floating-chat.donateButton.text-color': '#fff'
+  });
+</script>
+
+
+
+      </td>
+     </tr>
+    </tbody>
+   </table>
+   <br/>
+   <footer>
+
+    <span id="copyright">
+      © 2025 Khauni.Coffee
+    </span>
+    <br/><br/>
+
+ </body>
+</html>

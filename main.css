@@ -1,0 +1,344 @@
+
+
+
+#music-controls {
+    text-align: center; /* Center-align the controls */
+}
+
+.button-container {
+    display: flex;
+    justify-content: space-around; /* Distribute buttons evenly */
+    margin-bottom: 10px;
+}
+
+.button-container button {
+    flex: 1; /* Make buttons equal width */
+    margin: 0 5px; /* Space between buttons */
+    padding: 10px; /* Adjust padding as needed */
+    font-size: 14px; /* Smaller font size */
+}
+
+.volume-control {
+    display: flex;
+    align-items: center; /* Center-align the volume control items */
+    justify-content: center;
+}
+
+.volume-control .speaker-icon {
+    width: 18px; /* Adjust icon size */
+    height: 18px; /* Adjust icon size */
+    margin-right: 20px; /* Space between icon and slider */
+}
+
+.volume-control input[type="range"] {
+    width: 150px; /* Adjust the width of the volume slider */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+body {
+    overflow-x: hidden;
+    margin: 0;
+    margin-top: 10px
+}
+
+:root {
+    --body-text-shadow: 0 0 20px #ffffff4a, 0 0 20px #ff480045;
+    --green-text-shadow: 0 0 20px #0875bd82;
+    --letter-shadow: drop-shadow(0 0 0.75rem rgba(20, 220, 187, 0.35));
+    --firefox-body-shadow: 0 0 20px #ffffff31, 0 0 20px #00ffab45;
+    --firefox-green-shadow: 0 0 20px #08bd994f
+}
+
+body,
+#debug {
+    image-rendering: pixelated;
+    font-family: russiangothic, ms ui gothic, nec_apc3, Tahoma;
+    background-color: #000;
+    text-shadow: var(--body-text-shadow);
+    font-smooth: never;
+    -webkit-font-smoothing: none
+}
+
+h2 {
+    color: #2c9080;
+    font-family: pixel nes;
+    margin: 0;
+    text-shadow: var(--green-text-shadow)
+}
+
+a {
+    text-decoration: none;
+    color: #0be23a;
+    text-shadow: var(--green-text-shadow)
+}
+
+#music-controls button {
+    margin: 5px;
+    padding: 5px 10px;
+    background-color: #c50d0d;
+    border: none;
+    color: #fff;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+#music-controls button:hover {
+    background-color: #a00b0b;
+}
+
+#music-controls input[type="range"] {
+    width: 100%;
+    margin: 5px 0;
+}
+
+
+#container,
+#backside-container {
+    width: 900px;
+    margin: 0 auto
+}
+
+#logo {
+    text-align: center;
+    padding-top: 50px;
+    margin-right: 50px
+}
+
+.noanimation {
+    animation: none !important
+}
+
+#maintd {
+    width: 675px;
+    vertical-align: baseline
+}
+
+#menutd {
+    width: 225px;
+    vertical-align: baseline
+}
+
+.box {
+    background-color: #000000a8;
+    border: 2px solid #c50d0d;
+    border-radius: 4px;
+    color: #fff;
+    padding: 10px 15px;
+    margin: 5px
+}
+
+@-moz-document url-prefix() {
+    .box {
+        background-color: #000000d3
+    }
+}
+
+a:hover {
+    text-decoration: underline
+}
+
+@keyframes Static {
+    0% {
+        background-position: 0 0
+    }
+
+    100% {
+        background-position: 0 4px
+    }
+}
+
+#Knot-Kh {
+    clear: left;
+    float: left;
+    width: 110px;
+    position: relative;
+    bottom: 6px;
+    left: 1px;
+    margin-right: 5px
+}
+
+#Knot {
+    text-align: center;
+    width: 100px;
+    margin: 0 auto;
+    display: block;
+    font-size: 13px;
+    color: #000;
+    padding: 2px 0;
+    border: 1px solid #c50d0d
+}
+
+#Knot-Kh>a {
+    text-decoration: none
+}
+
+
+.centerbox {
+    text-align: center
+}
+
+
+footer {
+    text-align: center;
+    color: #fff
+}
+
+h3 {
+    margin: 0
+}
+
+#musicbox {
+    height: 60px
+}
+
+#albumcover {
+    border: 1px solid #24b9b2;
+    float: left;
+    margin-right: 10px
+}
+
+#songname {
+    display: table-cell;
+    width: 115px
+}
+
+#artist {
+    overflow-wrap: anywhere;
+    max-height: 35px;
+    text-overflow: ellipsis;
+    display: grid;
+    overflow: hidden
+}
+
+.blob {
+    background: #5dff8a;
+    border-radius: 50%;
+    margin-right: 7px;
+    height: 10px;
+    width: 10px;
+    box-shadow: 0 0 0 0 #5dff8a;
+    transform: scale(1);
+    animation: pulse 2s infinite;
+    display: inline-block;
+    vertical-align: middle;
+    margin-top: -4px
+}
+
+.inblob {
+    background: #5d5d5d;
+    border-radius: 50%;
+    margin-right: 7px;
+    height: 10px;
+    width: 10px;
+    box-shadow: 0 0 0 0 #5d5d5d;
+    transform: scale(1);
+    display: inline-block;
+    vertical-align: middle;
+    margin-top: -4px
+}
+
+
+#songlink {
+    color: #fff;
+    text-decoration: none
+}
+
+#status {
+    display: inline;
+    color: #ff0
+}
+
+#Ico {
+    float: left;
+    border: 1px solid #c50d0d;
+    margin: 10px 10px 5px 5px;
+    width: 100px;
+    height: 94px
+}
+
+#status {
+    display: inline;
+    color: #ff0
+}
+
+
+#statuses>td {
+    width: 250px
+}
+
+#statuses>td>span {
+    text-shadow: var(--firefox-body-shadow)
+}
+
+.status-ok {
+    color: #36fda0;
+    text-shadow: 0 0 20px #36fda0
+}
+
+.status-fail {
+    color: #ff5858;
+    text-shadow: 0 0 20px #ff5858
+}
+
+
+
+
+@font-face {
+    font-family: nec_apc3;
+    src: url(/fonts/pixelfonts/Web437_NEC_APC3_8x16.woff) format("woff");
+    font-weight: 400;
+    font-style: normal
+}
+
+@font-face {
+    font-family: nec_apc3;
+    src: url(/fonts/pixelfonts/Web437_Nix8810_M16.woff) format("woff");
+    font-weight: 700;
+    font-style: normal
+}
+
+@font-face {
+    font-family: russiangothic;
+    src: local("Arial");
+    font-weight: 400;
+    font-style: normal;
+    unicode-range: U+0420-42FF
+}
+
+@font-face {
+    font-family: digital;
+    src: url(/fonts/Digital-7.ttf?) format("truetype");
+    font-weight: 400;
+    font-style: normal
+}
+
+
+/* CSS for boxes */
+
+.box b {
+    font-size: 18px;
+    color: rgb(2, 174, 241);
+}
+
+.box p {
+    margin-bottom: 5px;
+    font-size: 16px;
+}
+
+/* Specific styling for minecrafttd and songstd */
+#minecrafttd, #songstd {
+    vertical-align: top;
+    padding-left: 10px;
+    padding-right: 10px;
+    width: 225px;
+}
